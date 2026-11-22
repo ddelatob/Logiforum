@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>logiforum</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+  </head>
+
+  <body>
+    <header class="top-row">
+      <h1 class="digi-tools-header">logiforum</h1>
+      <div class="search-bar">
+        <img
+          src="images/and_gate_vector.svg"
+          alt="Search icon"
+          class="search-icon"
+        />
+        <input
+          type="text"
+          placeholder="Search logiforum"
+          class="search-input"
+        />
+      </div>
+    </header>
+    <div class="main-content">
+      <div class="side-bar">
+        <div>Item 1</div>
+        <div>Item 2</div>
+      </div>
+      <div class="posts-wrapper">
+        <div class="posts-container" id="posts-container"></div>
+        <div class="pagination">
+          <button onclick="loadPosts(1)">Page 1</button>
+          <button onclick="loadPosts(2)">Page 2</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

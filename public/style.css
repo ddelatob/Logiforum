@@ -1,0 +1,171 @@
+/*
+#faf9f9
+#b3a9a4
+#64bfc8
+#808085
+#3c6786
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --gray-3: #333333;
+  --gray-5: #555555;
+  --gray-7: #777777;
+  --gray-9: #999999;
+  --gray-b: #bbbbbb;
+  --my-light-turquoise: #64bfc8;
+  --accent-blue: #3c6786;
+
+  --univ-font-fam:
+    system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: var(--gray-3);
+  font-family: var(--univ-font-fam);
+  color: #faf9f9;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.top-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid var(--gray-5);
+  gap: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  flex-shrink: 0;
+}
+
+.digi-tools-header {
+  color: var(--my-light-turquoise);
+  font-family: var(--univ-font-fam);
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  border-radius: 9999px;
+  background-color: var(--gray-5);
+  flex: 1;
+  max-width: 600px;
+  height: 44px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+.search-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.search-input {
+  background: transparent;
+  outline: none;
+  border: none;
+  text-align: left;
+  padding-left: 12px;
+  width: 100%;
+  height: 100%;
+  font-size: 1rem;
+  color: #faf9f9;
+}
+
+.search-input::placeholder {
+  color: var(--gray-b);
+}
+
+.search-input:focus {
+  text-align: left;
+}
+
+.search-input:not(:focus):placeholder-shown {
+  text-align: center;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  width: 220px;
+  flex-shrink: 0;
+  padding: 1rem;
+  border-right: 1px solid var(--gray-5);
+  gap: 0.5rem;
+  align-items: stretch;
+}
+
+.posts-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  overflow-y: auto;
+}
+
+.posts-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1.5rem;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.posts {
+  width: 100%;
+  background-color: var(--gray-5);
+  border: 1px solid var(--gray-7);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  color: #faf9f9;
+}
+
+.posts h2 {
+  margin: 0;
+  font-size: 1.125rem;
+}
+
+.pagination {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--gray-5);
+}
+
+button {
+  background-color: var(--my-light-turquoise);
+  color: #1e1e1e;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
