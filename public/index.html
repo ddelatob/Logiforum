@@ -26,18 +26,37 @@
     </header>
     <div class="main-content">
       <div class="side-bar">
-        <div>Item 1</div>
-        <div>Item 2</div>
+        <aside class="side-bar" aria-label="Popular Superthreads">
+          <h2 class="sidebar-heading">Popular Superthreads</h2>
+          <ul class="superthread-list" id="superthread-list">
+            <li>
+              <button class="superthread-item active" data-superthread-id="101">
+                <span class="superthread-title"
+                  >Digital Logic &amp; Gate Design</span
+                >
+                <span class="superthread-meta">2 subthreads</span>
+              </button>
+            </li>
+            <li>
+              <button class="superthread-item" data-superthread-id="102">
+                <span class="superthread-title"
+                  >Sequential Circuits &amp; Flip-Flops</span
+                >
+                <span class="superthread-meta">0 subthreads</span>
+              </button>
+            </li>
+          </ul>
+        </aside>
       </div>
       <div class="posts-wrapper">
         <div class="posts-container" id="posts-container"></div>
         <div class="pagination">
-          <button onclick="loadPosts(1)">Page 1</button>
-          <button onclick="loadPosts(2)">Page 2</button>
+          <button data-page="1">Page 1</button>
+          <button data-page="2">Page 2</button>
         </div>
       </div>
     </div>
 
-    <script src="app.js"></script>
+    <script type="module" src="app.js"></script>
   </body>
 </html>

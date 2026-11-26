@@ -13,4 +13,11 @@ async function loadPosts(pageNumber) {
     .join("");
 }
 
+document.querySelector(".pagination").addEventListener("click", (event) => {
+  const button = event.target.closest("button[data-page]");
+  if (button) {
+    loadPosts(Number(button.dataset.page));
+  }
+});
+
 loadPosts(1);
