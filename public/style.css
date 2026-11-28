@@ -169,6 +169,13 @@ body {
   overflow-y: auto;
 }
 
+#feed-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
 .posts-container {
   display: flex;
   flex-direction: column;
@@ -220,4 +227,67 @@ button:hover {
   color: var(--gray-9);
   margin: 12px 0 8px;
   padding: 0 12px;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.new-btn {
+  margin-left: auto;
+  border-radius: 9999px;
+}
+
+.create-view {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  max-width: 680px;
+  width: 100%;
+  padding: 1.5rem;
+}
+
+.create-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.create-header h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.superthread-picker {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.create-view select,
+.create-view input,
+.create-view textarea {
+  background-color: var(--gray-5);
+  border: 1px solid var(--gray-7);
+  border-radius: 8px;
+  padding: 0.65rem 0.85rem;
+  color: #faf9f9;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+.create-view select {
+  border-radius: 9999px;
+  cursor: pointer;
+}
+
+.create-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ghost-btn {
+  background: transparent;
+  color: var(--gray-b);
+  border: 1px solid var(--gray-7);
 }

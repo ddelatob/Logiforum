@@ -23,7 +23,9 @@
           class="search-input"
         />
       </div>
+      <button type="button" id="new-post-btn" class="new-btn">+ New</button>
     </header>
+
     <div class="main-content">
       <div class="side-bar">
         <aside class="side-bar" aria-label="Popular Superthreads">
@@ -32,11 +34,58 @@
         </aside>
       </div>
       <div class="posts-wrapper">
-        <div class="posts-container" id="posts-container"></div>
-        <div class="pagination">
-          <button data-page="1">Page 1</button>
-          <button data-page="2">Page 2</button>
+        <div id="feed-view">
+          <div class="posts-container" id="posts-container"></div>
+          <div class="pagination">
+            <button data-page="1">Page 1</button>
+            <button data-page="2">Page 2</button>
+          </div>
         </div>
+        <form id="create-view" class="create-view" hidden>
+          <div class="create-header">
+            <h2>Create post</h2>
+            <button type="button" id="cancel-create-btn" class="ghost-btn">
+              Cancel
+            </button>
+          </div>
+
+          <div class="superthread-picker">
+            <select id="superthread-select" required>
+              <option value="" disabled selected>Select Superthread</option>
+
+              <option value="__new__">+ Start a new superthread...</option>
+            </select>
+            <input
+              type="text"
+              id="new-superthread-input"
+              placeholder="New superthread title"
+              hidden
+            />
+          </div>
+
+          <input
+            type="text"
+            id="post-title-input"
+            placeholder="Title*"
+            required
+          />
+
+          <input
+            type="text"
+            id="post-topic-input"
+            placeholder="Topic / tag (optional)"
+          />
+
+          <textarea
+            id="post-body-input"
+            rows="6"
+            placeholder="Body text (optional)"
+          ></textarea>
+
+          <div class="create-actions">
+            <button type="submit" class="post-submit-btn">Post</button>
+          </div>
+        </form>
       </div>
     </div>
 

@@ -65,4 +65,9 @@ function updateActiveSidebarState() {
     });
 }
 
+function toggleHiddenCreateView() {
+  button = document.querySelector(".new-btn");
+}
+
+
 loadSuperThreads();
